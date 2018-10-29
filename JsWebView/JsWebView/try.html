@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function getToken() {
+                window.webkit.messageHandlers.jsHandler.postMessage("trigger from JS");
+            }
+        
+            function showToken(token) {
+                document.getElementById("demo").innerHTML = token;
+            }
+        </script>
+    </head>
+    <body>
+        <p id="demo">hello World!</p>
+        <input type="button" onclick="getToken()" value="get token from native">
+    </body>
+</html>
+
